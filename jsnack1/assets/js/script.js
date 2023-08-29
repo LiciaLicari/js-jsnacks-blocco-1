@@ -30,9 +30,9 @@ Tools:
 
 // Define variables
 
-const firstNumber = Number(prompt("Type a number ⃗"));
+const firstNumber = Number(prompt("Type a number"));
+const secondNumber =   Number(prompt("Type a new one"));
 console.log(firstNumber);
-const secondNumber =   Number(prompt("Type a new one ⃗"));
 console.log(secondNumber);
 // Create DOM elements
 
@@ -41,4 +41,29 @@ const firstNumberElement = document.createElement("div");
 const secondNumberElement = document.createElement("div");
 const resultElement = document.createElement("div");
 
-// if/else and print on page
+// and print on page
+
+resultElement.setAttribute("id", "result");
+bodyElement.append(resultElement);
+resultElement.append(firstNumberElement);
+resultElement.append(secondNumberElement);
+
+firstNumberElement.append("First number: " + firstNumber);
+secondNumberElement.append("Second number: " + secondNumber);
+
+
+// if/else & print
+
+if (firstNumber > secondNumber) {
+        console.log(firstNumber + " is the bigger one");
+        resultElement.append(firstNumber + " is the bigger one");
+} else if (firstNumber < secondNumber) {
+        console.log(secondNumber + " is the bigger one");
+        resultElement.append(secondNumber + " is the bigger one");
+} else if (firstNumber === secondNumber) {
+        console.log(secondNumber + "=" + firstNumber + " Numbers are even");
+        resultElement.append(secondNumber + "=" + firstNumber + " Numbers are even");
+} else {
+        console.log("Something went wrong");
+        resultElement.append("Something went wrong");
+}
