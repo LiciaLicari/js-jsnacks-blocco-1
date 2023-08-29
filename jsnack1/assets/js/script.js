@@ -7,25 +7,38 @@ Descrizione:
 L’utente inserisce due numeri in successione, con due prompt.
 Il software stampa il maggiore.
 
-Attenzione:
-Create una sotto-cartella per ogni jsnack e riportate la consegna all'inizio del file js.
-La struttura dei file e cartelle dovrebbe essere la seguente:
-:git: :cartella_file_aperta: js-jsnacks-blocco-1 (repo)
-      :cartella_file_aperta: jsnack1 (cartella)
-             index.html
-             script.js
-     :cartella_file_aperta:  jsnack2 (cartella)
-             index.html
-             script.js
-     :cartella_file_aperta:  jsnack3 (cartella)
-             index.html
-             script.js
-e cosi via.
 Consigli:
-se state scrivendo lo stesso codice identico o molto simile, considerate la possibilitá che serva un loop
-partite sempre con l'elenco degli strumenti
-scrivete in italiano cosa volete che il programma faccia (pseudo codice)
-Confermate lettura come al solito e buon divertimento! :baby-yoda:
-
+- se state scrivendo lo stesso codice identico o molto simile, 
+considerate la possibilitá che serva un loop
+- partite sempre con l'elenco degli strumenti
+- scrivete in italiano cosa volete che il programma faccia (pseudo codice)
 
 */
+
+/* 
+
+Tools:
+- prompt
+- const
+- let
+- .createElement
+- .querySelector
+- append
+- if/else
+- console.log
+*/
+
+// Define variables
+
+const firstNumber = Number(prompt("Type a number ⃗"));
+console.log(firstNumber);
+const secondNumber =   Number(prompt("Type a new one ⃗"));
+console.log(secondNumber);
+// Create DOM elements
+
+const bodyElement = document.querySelector("body");
+const firstNumberElement = document.createElement("div");
+const secondNumberElement = document.createElement("div");
+const resultElement = document.createElement("div");
+
+// if/else and print on page
