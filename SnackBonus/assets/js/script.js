@@ -8,15 +8,24 @@ se è dispari inseriscilo nell’array.
 
 */
 
-/*
-Tools:
-- prompt
-- const
-- let
-- .createElement
-- .querySelector
-- append
+/* #Tools
+- array 
+- for 
 - if/else
-- for
-- console.log
 */
+
+//empty array 
+const oddNumbers =[]
+
+//for loop
+for(let i = 0; i < 6; i++){
+    let userNumber = Number(prompt('Insert a number'));
+    console.log(userNumber);
+
+    //if dispari inserisco nell'array
+    if(userNumber % 2 != 0){
+        console.log('odd');
+        oddNumbers.push(userNumber);
+        console.log(oddNumbers, 'Odd numbers');
+    }
+}
