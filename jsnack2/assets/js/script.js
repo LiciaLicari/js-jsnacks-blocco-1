@@ -8,25 +8,70 @@ Descrizione:
 L’utente inserisce due parole in successione, con due prompt.
 Il software stampa prima la parola più corta, poi la parola più lunga.
 
-Attenzione:
-Create una sotto-cartella per ogni jsnack e riportate la consegna all'inizio del file js.
-La struttura dei file e cartelle dovrebbe essere la seguente:
-:git: :cartella_file_aperta: js-jsnacks-blocco-1 (repo)
-      :cartella_file_aperta: jsnack1 (cartella)
-             index.html
-             script.js
-     :cartella_file_aperta:  jsnack2 (cartella)
-             index.html
-             script.js
-     :cartella_file_aperta:  jsnack3 (cartella)
-             index.html
-             script.js
-e cosi via.
 Consigli:
-se state scrivendo lo stesso codice identico o molto simile, considerate la possibilitá che serva un loop
+se state scrivendo lo stesso codice identico o molto simile, 
+considerate la possibilitá che serva un loop
 partite sempre con l'elenco degli strumenti
 scrivete in italiano cosa volete che il programma faccia (pseudo codice)
-Confermate lettura come al solito e buon divertimento! :baby-yoda:
+
 
 
 */
+
+/* 
+
+Tools:
+- prompt
+- const
+- let
+- .createElement
+- .querySelector
+- append
+- if/else
+- console.log
+*/
+
+// Define variables
+
+const firstWord = prompt('Type a word');
+const secondWord = prompt('Type another one');
+console.log(firstWord);
+console.log(secondWord);
+
+// Create DOM elements
+
+const bodyElement = document.querySelector("body");
+const firstWordElement = document.createElement("div");
+const secondWordElement = document.createElement("div");
+const outcomeElement = document.createElement("div");
+
+// and print on page
+
+outcomeElement.setAttribute("id", "outcome");
+bodyElement.append(outcomeElement);
+outcomeElement.append(firstWordElement);
+outcomeElement.append(secondWordElement);
+
+firstWordElement.append("First word: " + firstWord);
+secondWordElement.append("Second word: " + secondWord);
+
+// if/else & print beginning from the shorter one
+
+if (firstWord != "" && secondWord != "") 
+{
+if (firstWord.length <= secondWord.length) {
+        console.log(firstWord, secondWord);
+        outcomeElement.append(`From the shorter: ${firstWord} ${secondWord}`);
+} else if (secondWord.length < firstWord.length) {
+        console.log(secondWord, firstWord);
+        outcomeElement.append(`From the shorter: ${secondWord} ${firstWord}`);
+} else if (secondWord.length = firstWord.length) {
+        console.log(firstWord, secondWord);
+        outcomeElement.append(`The words you chose are even: ${firstWord} ${secondWord}`);
+}
+    
+ else {
+        console.log("Something went wrong");
+        outcomeElement.append("Something went wrong");
+}
+}
