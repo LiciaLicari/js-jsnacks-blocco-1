@@ -30,6 +30,8 @@ Tools:
 
 // Define variables
 
+/*
+
 const firstNumber = Number(prompt("Type a number"));
 const secondNumber =   Number(prompt("Type a new one"));
 console.log(firstNumber);
@@ -67,6 +69,7 @@ if (firstNumber > secondNumber) {
         console.log("Something went wrong");
         resultElement.append("Something went wrong");
 }
+*/
 
 
 //WHILE con Fabio
@@ -75,17 +78,17 @@ if (firstNumber > secondNumber) {
 // L’utente inserisce due numeri in successione, con due prompt.
 // Il software stampa il maggiore
 
-let i = 1;
-while (i <= 2) {
-        const userNumber = Number(prompt("type a number"))
+let i = 0;
 
-        if (isNan(userNumber)) {
-                alert("you didn't type a number")
-                i--
-        } else {
-                Numbers.push(userNumber)
-        }
-        i++
+const userNumbers = [];
+
+while ( i < 2) {
+    const element = [i];
+    //console.log(element);
+    const userNumber = Number(prompt('Insert a number of your choice'));
+    //console.log(userNumber);
+    userNumbers.push = (userNumber);
+
+    i++
 }
-console.log(i);
 
