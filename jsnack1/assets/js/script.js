@@ -67,3 +67,25 @@ if (firstNumber > secondNumber) {
         console.log("Something went wrong");
         resultElement.append("Something went wrong");
 }
+
+
+//WHILE con Fabio
+
+// Snack 1
+// L’utente inserisce due numeri in successione, con due prompt.
+// Il software stampa il maggiore
+
+let i = 1;
+while (i <= 2) {
+        const userNumber = Number(prompt("type a number"))
+
+        if (isNan(userNumber)) {
+                alert("you didn't type a number")
+                i--
+        } else {
+                Numbers.push(userNumber)
+        }
+        i++
+}
+console.log(i);
+
